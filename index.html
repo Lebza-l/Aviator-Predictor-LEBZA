@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Aviator Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .form-group {
+      margin: 20px;
+    }
+    .input {
+      padding: 10px;
+      width: 200px;
+      margin: 10px;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      font-size: 20px;
+      color: green;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automated Aviator Predictor</h1>
+  <p>Click the button to get your prediction based on the last 5 rounds:</p>
+
+  <!-- Form for input -->
+  <div class="form-group">
+    <label for="lastMultiplier">Enter the Latest Multiplier:</label><br>
+    <input type="number" id="lastMultiplier" class="input" placeholder="e.g., 1.8"><br>
+  </div>
+
+  <div class="form-group">
+    <label for="riskLevel">Select Risk Level:</label><br>
+    <select id="riskLevel" class="input">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br>
+  </div>
+
+  <!-- Button to trigger prediction -->
+  <button class="button" onclick="addMultiplierAndPredict()">Add Multiplier & Predict</button>
+
+  <!-- Area to display result -->
+  <div class="result" id="result"></div>
+
+  <script src="auto-predictor.js"></script>
+</body>
+</html>
